@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --color-yellow-300: #ffc300;
+  --color-yellow-500: #fca311;
+  --color-blue-300: #003566;
+  --color-blue-100: #219ebc;
+  --color-orange-300: #fb8500;
+  --color-blue-200: #8ecae6;
+}
+
+.logoFont {
+  font-family: "New Rocker";
+}
