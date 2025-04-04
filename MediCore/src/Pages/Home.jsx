@@ -2,9 +2,9 @@ function Home() {
   return (
     <div className="flex flex-col items-center">
       <h1 className="logoFont text-9xl text-yellow-300 text-center mb-[2%] mt-[2%]">
-        Welcome to Librazen
+        Welcome to MediCore
       </h1>
-      <div className="bg-blue-100 min-w-[400px] w-8/10 p-[1em] rounded-xl text-4xl">
+      <div className="bg-blue-900 min-w-[400px] w-8/10 p-[1em] rounded-xl text-4xl">
         Welcome to Librazen, a comprehensive library management system designed
         to streamline the way books are organized, tracked, and accessed.
         Whether you are a librarian managing a vast collection, a student
