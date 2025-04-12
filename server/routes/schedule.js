@@ -29,3 +29,5 @@ router.delete("/:id", isAuthenticated, async (req, res) => {
   ]);
   res.json({ message: "Schedule deleted" });
 });
+
+module.exports = router;

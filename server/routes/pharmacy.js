@@ -47,3 +47,5 @@ router.delete("/:id", async (req, res) => {
   await db.query("DELETE FROM pharmacy WHERE id = ?", [req.params.id]);
   res.json({ message: "Deleted" });
 });
+
+module.exports = router;

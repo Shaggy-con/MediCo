@@ -30,3 +30,5 @@ router.delete("/:id", async (req, res) => {
   await db.query("DELETE FROM er_ward WHERE id = ?", [req.params.id]);
   res.json({ message: "Removed from ER ward" });
 });
+
+module.exports = router;
