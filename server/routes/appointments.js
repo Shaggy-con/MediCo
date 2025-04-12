@@ -64,3 +64,5 @@ router.post("/diagnosis", isAuthenticated, async (req, res) => {
   );
   res.json({ message: "Diagnosis added" });
 });
+
+module.exports = router;
