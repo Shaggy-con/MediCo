@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -7,7 +8,7 @@ export default function PatientDiagnosis() {
   useEffect(() => {
     const fetch = async () => {
       const res = await axios.get(
-        "http://localhost:5000/api/diagnosis/patient/me",
+        "http://localhost:8080/api/diagnosis/patient/me",
         {
           withCredentials: true,
         }

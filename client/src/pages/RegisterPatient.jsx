@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -14,7 +15,7 @@ export default function RegisterPatient() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:5000/api/patients/register", form, {
+    await axios.post("http://localhost:8080/api/patients/register", form, {
       withCredentials: true,
     });
     navigate("/login/patient");

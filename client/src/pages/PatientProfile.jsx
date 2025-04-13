@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -25,14 +26,14 @@ export default function PatientProfile() {
   }, []);
 
   const fetchProfile = async () => {
-    const res = await axios.get("http://localhost:5000/api/patients/profile", {
+    const res = await axios.get("http://localhost:8080/api/patients/profile", {
       withCredentials: true,
     });
     setProfile(res.data);
   };
 
   const fetchAppointments = async () => {
-    const res = await axios.get("http://localhost:5000/api/appointments/my", {
+    const res = await axios.get("http://localhost:8080/api/appointments/my", {
       withCredentials: true,
     });
     setAppointments(res.data);
@@ -40,7 +41,7 @@ export default function PatientProfile() {
 
   const updateHistory = async () => {
     await axios.post(
-      "http://localhost:5000/api/patients/medical-history",
+      "http://localhost:8080/api/patients/medical-history",
       history,
       { withCredentials: true }
     );
@@ -48,7 +49,7 @@ export default function PatientProfile() {
   };
 
   const bookAppointment = async () => {
-    await axios.post("http://localhost:5000/api/appointments", form, {
+    await axios.post("http://localhost:8080/api/appointments", form, {
       withCredentials: true,
     });
     fetchAppointments();
@@ -64,7 +65,7 @@ export default function PatientProfile() {
   };
 
   const cancelAppointment = async (id) => {
-    await axios.delete(`http://localhost:5000/api/appointments/${id}`, {
+    await axios.delete(`http://localhost:8080/api/appointments/${id}`, {
       withCredentials: true,
     });
     fetchAppointments();

@@ -11,7 +11,7 @@ export default function DoctorSchedule() {
   });
 
   const fetchSchedules = async () => {
-    const res = await axios.get("http://localhost:5000/api/schedule", {
+    const res = await axios.get("http://localhost:8080/api/schedule", {
       withCredentials: true,
     });
     setSchedules(res.data);
@@ -28,7 +28,7 @@ export default function DoctorSchedule() {
     }
 
     await axios.post(
-      "http://localhost:5000/api/schedule",
+      "http://localhost:8080/api/schedule",
       {
         ...form,
         breaks: form.breaks.split(",").map((b) => b.trim()),
@@ -41,7 +41,7 @@ export default function DoctorSchedule() {
   };
 
   const deleteSchedule = async (id) => {
-    await axios.delete(`http://localhost:5000/api/schedule/${id}`, {
+    await axios.delete(`http://localhost:8080/api/schedule/${id}`, {
       withCredentials: true,
     });
     fetchSchedules();

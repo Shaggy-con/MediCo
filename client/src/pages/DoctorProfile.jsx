@@ -16,7 +16,7 @@ export default function DoctorProfile() {
   }, []);
 
   const fetchProfile = async () => {
-    const res = await axios.get("http://localhost:5000/api/doctors/profile", {
+    const res = await axios.get("http://localhost:8080/api/doctors/profile", {
       withCredentials: true,
     });
     setProfile(res.data);
@@ -24,7 +24,7 @@ export default function DoctorProfile() {
 
   const fetchAppointments = async () => {
     const res = await axios.get(
-      "http://localhost:5000/api/doctors/appointments",
+      "http://localhost:8080/api/doctors/appointments",
       { withCredentials: true }
     );
     setAppointments(res.data);
@@ -32,7 +32,7 @@ export default function DoctorProfile() {
 
   const submitDiagnosis = async () => {
     await axios.post(
-      "http://localhost:5000/api/appointments/diagnosis",
+      "http://localhost:8080/api/appointments/diagnosis",
       {
         appointment_id: selectedAppointment.id,
         diagnosis: diagnosisForm.diagnosis,
